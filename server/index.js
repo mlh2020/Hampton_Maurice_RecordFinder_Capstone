@@ -1,23 +1,28 @@
 const express = require('express');
 const axios = require('axios');
 const app = express();
+const cors = require('cors');
 const port = 3000;
 require('dotenv').config();
 
 const API_KEY = process.env.DISCOGS_KEY;
 const API_SECRET = process.env.DISCOGS_SECRET;
 
-// Endpoint for searching the Discogs database
-app.get('/search', async (req, res) => {
+// Enable CORS for all requests
+app.use(cors());
+
+// Endpoint for searching the Discogs database for releases
+app.get('/search/releases', async (req, res) => {
     // Extract query parameters from the request query string
     const searchParams = req.query;
     try {
-        // Make a GET request to the Discogs API search endpoint
+        // Make a GET request to the Discogs API search endpoint, specifying 'release' as the type
         const response = await axios.get('https://api.discogs.com/database/search', {
             params: {
                 key: API_KEY,
                 secret: API_SECRET,
-                ...searchParams // Spread the search parameters into the request
+                type: 'release', // Specify that we only want releases
+                ...searchParams // Spread the additional search parameters into the request
             }
         });
         res.json(response.data); // Send back the response data

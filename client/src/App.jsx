@@ -6,7 +6,7 @@ function App() {
   return (
     <div>
       <SearchBar />
-      <RecordList /> 
+      <RecordList />
       </div>
   )
 }

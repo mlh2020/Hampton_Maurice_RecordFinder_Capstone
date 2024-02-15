@@ -1,4 +1,5 @@
 import { useState } from "react";
+import SearchResultItem from './SearchResultItem';
 
 function SearchBar() {
     const [query, setQuery] = useState('');
@@ -33,20 +34,8 @@ function SearchBar() {
                 <button type="submit">Search</button>
             </form>
             <div>
-                {searchResults.map((result, index) => (
-                    <div className="record-item" key={index}>
-                    {result.cover_image && <img src={result.cover_image} alt={result.title || 'Unknown Title'} />}
-                    <h3>{result.title || 'Unknown Title'}</h3>
-                    {result.artist && <p>Artist: {result.artist}</p>}
-                    {result.year && <p>Year: {result.year}</p>}
-                    {result.genre && <p>Genre: {result.genre.join(', ')}</p>}
-                    {result.style && <p>Style: {result.style.join(', ')}</p>}
-                    {result.format && <p>Format: {result.format.join(', ')}</p>}
-                    {result.label && <p>Label: {result.label.join(', ')}</p>}
-                    {result.country && <p>Country: {result.country}</p>}
-                    {result.barcode && <p>Barcode: {result.barcode}</p>}
-                   {/* Include additional properties as necessary */}
-              </div>
+              {searchResults.map((result, index) => (
+                  <SearchResultItem key={index} result={result} />
                 ))}
             </div>
         </>

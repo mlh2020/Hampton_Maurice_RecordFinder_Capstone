@@ -28,6 +28,7 @@ Before you begin, ensure you have the following installed:
 3. Install the necessary packages for the server:
 
 ```
+npm install
 cd server
 npm install
 ```

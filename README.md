@@ -1,4 +1,4 @@
-# Discogs Record Search
+# Discogs Record Finder
 
 This project is a simple, user-friendly application that allows users to search for records using the Discogs API. It utilizes the MERN stack (MongoDB, Express.js, React, and Node.js), with a focus on delivering a responsive and intuitive user interface. Users can search for records by various criteria and view detailed information about each record, including the artist, release title, year, genre, and more.
 

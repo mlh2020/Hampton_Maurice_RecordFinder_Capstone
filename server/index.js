@@ -35,7 +35,6 @@ app.get('/search/releases', async (req, res) => {
             }
         });
         /*
-        // Assuming the data is in response.data.results
         if (response.data || response.data.results) {
             const releases = response.data.results.map(item => ({
                 title: item.title,
@@ -54,7 +53,7 @@ app.get('/search/releases', async (req, res) => {
             // This is a bulk operation, but you could also do them one by one if necessary
             const savedReleases = await Release.insertMany(releases);
             
-            // Optionally, send the saved releases back as the response
+            //send the saved releases back as the response
             res.json(savedReleases);
         } else {
             res.status(404).json({ message: 'No releases found' });

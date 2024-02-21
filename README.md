@@ -34,10 +34,25 @@ npm install
 
 4. Navigate to the client directory and install the necessary packages:
 
+```
+cd ../client
+npm install
+```
+
 5. Create a `.env` file in the server directory to store your environment variables:
+
+```
+DISCOGS_KEY=your_discogs_api_key
+DISCOGS_SECRET=your_discogs_api_secret
+MONGO_URI=your_mongodb_uri
+```
 
 ### Running the Application
 
 1. Start the front and backends:
+
+```
+npm start
+```
 
 2. The application should now be running and accessible at `http://localhost:5173`.

@@ -5,13 +5,15 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: red;
+
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 
 a {
   font-weight: 500;
@@ -35,6 +37,32 @@ h1 {
   line-height: 1.1;
 }
 
+h3 {
+  border: solid white;
+  background-color: black;
+  text-decoration: underline;
+}
+
+p {
+  border: solid white;
+  background-color: black;
+}
+
+.searchBar {
+  background-color: black;
+  border: solid white;
+  margin: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 25%;
+}
+
+.searchButton {
+  margin-left: 10px;
+  display: inline-block;
+}
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -47,7 +75,7 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: white;
 }
 button:focus,
 button:focus-visible {
@@ -60,7 +88,7 @@ button:focus-visible {
     background-color: #ffffff;
   }
   a:hover {
-    color: #747bff;
+    color: red
   }
   button {
     background-color: #f9f9f9;

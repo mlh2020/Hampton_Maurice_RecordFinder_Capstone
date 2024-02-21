@@ -22,7 +22,7 @@ function SearchBar() {
 
     return (
         <>
-            <form onSubmit={handleSearch}>
+            <form onSubmit={handleSearch} className="searchBar">
                 <label htmlFor="search-query">Search Releases:</label>
                 <input
                     type="text"
@@ -31,7 +31,7 @@ function SearchBar() {
                     onChange={(e) => setQuery(e.target.value)}
                     placeholder="Enter search term..."
                 />
-                <button type="submit">Search</button>
+                <button type="submit" className="searchButton">Search</button>
             </form>
             <div>
               {searchResults.map((result, index) => (
